@@ -1,13 +1,13 @@
 # Muhammad Adeel Sajjad
 
-Systems, Infrastructure & Cyber-Physical Security Engineer specializing in cloud operations, network reliability, industrial protocol security, and embedded physical modeling.
+Systems, Infrastructure & Cyber-Physical Security Engineer specializing in cloud operations, network reliability, industrial protocol security, post-quantum cryptography, and embedded physical modeling.
 
 ---
 
 ### Core Competencies
 
 - **Enterprise Systems & Cloud Infrastructure:** Zero-Downtime Blue/Green Deployments, Service Discovery Mesh, Token-Bucket Traffic Shaping, Docker, Nginx Reverse Proxy Architecture
-- **DevSecOps & Zero-Trust Security:** X.509 PKI/mTLS Mesh Authentication, Dynamic CIDR Policy Enforcement, Bandit SAST Auditing, CAN-Bus & SCADA APDU Fuzzing
+- **DevSecOps & Zero-Trust Security:** Hybrid Post-Quantum Key Encapsulation (ML-KEM-768), X.509 PKI/mTLS Mesh Authentication, Dynamic CIDR Policy Enforcement, Bandit SAST Auditing, CAN-Bus & SCADA APDU Fuzzing
 - **Cyber-Physical Systems (CPS) & EE Foundations:** Coupled-Mode Inductive Modeling, Inverter P-f/Q-V Droop Dynamics, Byzantine/FDI Resilient Consensus, Discrete Extended Kalman Filtering (EKF)
 
 ---
@@ -27,6 +27,7 @@ Systems, Infrastructure & Cyber-Physical Security Engineer specializing in cloud
 
 | Repository | Focus & Architecture | Security & CI/CD Pipeline |
 | :--- | :--- | :--- |
+| **[quantum-pqc-tls-canary](https://github.com/Haidriyam/quantum-pqc-tls-canary)** | NIST FIPS 203 ML-KEM-768 + X25519 hybrid key encapsulation canary protecting edge CPS telemetry against Harvest-Now-Decrypt-Later (HNDL) attacks. | Downgrade attack detection, wire overhead profiling, Bandit SAST, automated CI |
 | **[zero-trust-pki-mesh](https://github.com/Haidriyam/zero-trust-pki-mesh)** | Internal X.509 Certificate Authority provisioning root, intermediate, and leaf certificates for edge Mutual TLS (mTLS) reverse proxy enforcement. | Cryptographic lifecycle validation, Nginx mTLS handshake tests, SAST auditing |
 | **[gitops-mesh-orchestrator](https://github.com/Haidriyam/gitops-mesh-orchestrator)** | Service mesh orchestrator featuring dynamic TTL heartbeat leases, round-robin load distribution, token-bucket burst rate-limiting, and CIDR ingress inspection. | Distributed multi-node test harness, injection payload defense, rootless container |
 | **[attack-surface-intel-pipeline](https://github.com/Haidriyam/attack-surface-intel-pipeline)** | External Attack Surface Management (EASM) engine aggregating multi-source recon data, scoring exposure vectors, and outputting SIEM-ready JSON telemetry. | Exposure heuristic unit tests, Bandit SAST security gate, automated Docker builds |
@@ -35,9 +36,9 @@ Systems, Infrastructure & Cyber-Physical Security Engineer specializing in cloud
 
 ### Pipeline Quality & Verification Standard
 
-Every repository adheres to production-grade DevSecOps standards:
-- **Continuous Integration (CI):** Fully automated GitHub Actions pipelines running on every commit and pull request.
-- **Static Analysis (SAST):** Automated vulnerability scanning using `bandit` to ensure zero high/medium security issues in application logic.
-- **Strict Code Hygiene:** Enforced PEP8 compliance with `flake8` zero-tolerance configurations.
-- **Automated Testing:** Test suites verifying mathematical convergence, security perimeter fuzzing, and failure recovery.
-- **Hardened Packaging:** Rootless Docker containers prepared for microservice orchestration.
+Every repository adheres to strict production-grade DevSecOps standards:
+- **Continuous Integration (CI):** Fully automated GitHub Actions workflows running on every commit and pull request.
+- **Static Analysis (SAST):** Continuous vulnerability auditing via `bandit` enforcing zero unresolved security flaws.
+- **Code Hygiene:** Strict PEP8 compliance checked by `flake8`.
+- **Automated Testing:** Unit test suites validating mathematical convergence, protocol edge cases, and cryptographic integrity.
+- **Hardened Packaging:** Rootless Docker images configured for secure, minimal attack-surface deployment.
