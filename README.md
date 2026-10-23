@@ -9,6 +9,7 @@ Systems & Cyber-Physical Security Engineer bridging classical Electrical Power f
 - **Smart Grid & Microgrid Resilience:** Discrete Extended Kalman Filtering (EKF), secondary $P\text{-}f$ and $Q\text{-}V$ droop dynamics, multi-agent consensus algorithms, and False Data Injection (FDI) mitigation in distributed energy resources.
 - **Electromagnetics & Power Electronics Modeling:** Mathematical modeling of Series-Series (SS) resonant inductive links, mutual inductance parameter extraction ($k, M$), Zero-Voltage Switching (ZVS) topologies, and Li-ion Thevenin equivalent circuits.
 - **OT/SCADA & Network Security:** Deep-packet APDU dissection for Modbus-TCP, zero-trust command whitelisting, application-layer telemetry anomaly detection, and edge Mutual TLS (mTLS) architectures.
+- **Computational Poetics & Stochastic Text Analysis:** Discrete sequence modeling, multi-scale Shannon information entropy, and quantitative pacing dynamics in historical serialized narrative corpora.
 - **Production Systems & DevSecOps:** Automated Bandit SAST security sweeps, flake8/PEP8 compliance gates, rootless Docker packaging, and automated continuous integration pipelines.
 
 ---
@@ -32,6 +33,12 @@ Systems & Cyber-Physical Security Engineer bridging classical Electrical Power f
 | **[quantum-pqc-tls-canary](https://github.com/Haidriyam/quantum-pqc-tls-canary)** | NIST FIPS 203 ML-KEM-768 + X25519 hybrid key encapsulation canary evaluating handshake latency and MTU wire overhead for edge CPS telemetry links. | Downgrade attack detection test harness, wire overhead profiler, automated CI | ![CI](https://github.com/Haidriyam/quantum-pqc-tls-canary/actions/workflows/devsecops-ci.yml/badge.svg) |
 | **[gitops-mesh-orchestrator](https://github.com/Haidriyam/gitops-mesh-orchestrator)** | Service mesh platform featuring dynamic TTL leases, round-robin load distribution, token-bucket burst rate-limiting, and ingress packet inspection. | Multi-node distributed test harness, injection payload defense, rootless container | ![CI](https://github.com/Haidriyam/gitops-mesh-orchestrator/actions/workflows/devsecops-ci.yml/badge.svg) |
 | **[attack-surface-intel-pipeline](https://github.com/Haidriyam/attack-surface-intel-pipeline)** | External Attack Surface Management (EASM) engine aggregating reconnaissance data, scoring exposure vectors, and emitting SIEM-ready JSON telemetry. | Exposure heuristic unit tests, Bandit SAST security gate, automated Docker build | ![CI](https://github.com/Haidriyam/attack-surface-intel-pipeline/actions/workflows/devsecops-ci.yml/badge.svg) |
+
+#### 3. Computational Humanities & Quantitative Language Systems
+
+| Repository | Focus & Architecture | Security & CI/CD Pipeline | Status |
+| :--- | :--- | :--- | :--- |
+| **[victorian-serial-entropy](https://github.com/Haidriyam/victorian-serial-entropy)** | Information-theoretic analysis of serialized literary corpora. Validates the *Informational Bottleneck Hypothesis* across multi-scale sliding windows ($W=600, S=150$) and structural cliffhanger boundaries ($\Delta H < -0.45\text{ bits}$). | Tokenization via spaCy, discrete stochastic modeling, Matplotlib vectorization | Active Research |
 
 ---
 
