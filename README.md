@@ -1,5 +1,11 @@
 # Muhammad Adeel Sajjad
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adeel-haider-ae/)
+[![GitHub](https://img.shields.io/badge/GitHub-Haidriyam-181717?style=flat&logo=github&logoColor=white)](https://github.com/Haidriyam)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![Docker](https://img.shields.io/badge/Docker-Rootless-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
+[![CI/CD](https://img.shields.io/badge/Pipeline-GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)](https://github.com/Haidriyam)
+
 Systems & Cyber-Physical Security Engineer bridging classical Electrical Power foundations with production-grade Linux systems, protocol telemetry parsers, and reproducible software-defined CPS testbeds.
 
 ---
@@ -9,7 +15,7 @@ Systems & Cyber-Physical Security Engineer bridging classical Electrical Power f
 - **Smart Grid & Microgrid Resilience:** Discrete Extended Kalman Filtering (EKF), secondary $P\text{-}f$ and $Q\text{-}V$ droop dynamics, multi-agent consensus algorithms, and False Data Injection (FDI) mitigation in distributed energy resources.
 - **Electromagnetics & Power Electronics Modeling:** Mathematical modeling of Series-Series (SS) resonant inductive links, mutual inductance parameter extraction ($k, M$), Zero-Voltage Switching (ZVS) topologies, and Li-ion Thevenin equivalent circuits.
 - **OT/SCADA & Network Security:** Deep-packet APDU dissection for Modbus-TCP, zero-trust command whitelisting, application-layer telemetry anomaly detection, and edge Mutual TLS (mTLS) architectures.
-- **Computational Poetics & Stochastic Text Analysis:** Discrete sequence modeling, multi-scale Shannon information entropy, and quantitative pacing dynamics in historical serialized narrative corpora.
+- **Computational Poetics & Diachronic Semantics:** Discrete sequence modeling, multi-scale Shannon entropy trajectories, Orthogonal Procrustes matrix alignment (SVD), and diachronic lexical fossilization across historical text corpora.
 - **Production Systems & DevSecOps:** Automated Bandit SAST security sweeps, flake8/PEP8 compliance gates, rootless Docker packaging, and automated continuous integration pipelines.
 
 ---
@@ -36,9 +42,10 @@ Systems & Cyber-Physical Security Engineer bridging classical Electrical Power f
 
 #### 3. Computational Humanities & Quantitative Language Systems
 
-| Repository | Focus & Architecture | Security & CI/CD Pipeline | Status |
+| Repository | Focus & Architecture | Interactive Demo & Pipeline | Status |
 | :--- | :--- | :--- | :--- |
-| **[victorian-serial-entropy](https://github.com/Haidriyam/victorian-serial-entropy)** | Information-theoretic analysis of serialized literary corpora. Validates the *Informational Bottleneck Hypothesis* across multi-scale sliding windows ($W=600, S=150$) and structural cliffhanger boundaries ($\Delta H < -0.45\text{ bits}$). | Tokenization via spaCy, discrete stochastic modeling, Matplotlib vectorization | Active Research |
+| **[victorian-serial-entropy](https://github.com/Haidriyam/victorian-serial-entropy)** | Information-theoretic analysis of serialized literary corpora. Validates the *Informational Bottleneck Hypothesis* across multi-scale sliding windows ($W=600, S=150$) and structural cliffhanger boundaries ($\Delta H < -0.45\text{ bits}$). | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Haidriyam/victorian-serial-entropy/blob/main/notebooks/demo.ipynb) | Active Research |
+| **[diachronic-semantic-drift](https://github.com/Haidriyam/diachronic-semantic-drift)** | Diachronic lexical drift and statutory fossilization tracking across historical vector spaces aligned via Orthogonal Procrustes SVD ($W^{(t_1)} \approx W^{(t_2)}Q$). | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Haidriyam/diachronic-semantic-drift/blob/main/notebooks/drift_colab.ipynb) | Active Research |
 
 ---
 
