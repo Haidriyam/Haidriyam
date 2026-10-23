@@ -1,61 +1,52 @@
-# Diachronic Semantic Drift & Lexical Fossilization Engine
+# Muhammad Adeel Sajjad
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Haidriyam/diachronic-semantic-drift/blob/main/notebooks/drift_colab.ipynb)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Field: Computational Linguistics](https://img.shields.io/badge/Field-Computational%20Linguistics%20%7C%20NLP-purple.svg)]()
-[![Code Style: PEP8](https://img.shields.io/badge/code%20style-pep8-green.svg)](https://www.python.org/dev/peps/pep-0008/)
-
-A quantitative linguistic engine combining linear algebra and distributed word representations to track diachronic semantic drift, lexical obsolescence, and statutory/formulaic fossilization across historical text corpora.
+Systems & Cyber-Physical Security Engineer bridging classical Electrical Power foundations with production-grade Linux systems, protocol telemetry parsers, and reproducible software-defined CPS testbeds.
 
 ---
 
-## 1. Problem Statement: The Incomparability of Historical Vector Spaces
+### Research & Technical Focus Areas
 
-When training distributional word representations (such as Word2Vec Skip-Gram or Continuous Bag of Words) across distinct historical time slices $t_1$ and $t_2$, the resulting coordinate spaces cannot be directly compared. 
-
-Because stochastic initialization, negative sampling, and rotational invariance cause vector axes to rotate arbitrarily during optimization, measuring raw Euclidean or cosine distances across independently trained historical spaces yields spurious mathematical noise.
-
-This repository resolves the coordinate misalignment problem by computing an **Orthogonal Procrustes Matrix Alignment** via Singular Value Decomposition (SVD), mapping historical embeddings into a unified, metric-preserving coordinate frame.
-
----
-
-## 2. Mathematical Methodology & Formulation
-
-Let $W^{(t_1)}, W^{(t_2)} \in \mathbb{R}^{\vert{}V\vert{} \times d}$ denote the embedding matrices of a shared intersection vocabulary $V$ with latent dimensionality $d$.
-
-### 2.1 Orthogonal Procrustes Alignment via SVD
-To find the optimal orthogonal transformation matrix $Q \in \mathbb{R}^{d \times d}$ that rotates and aligns epoch $t_2$ into the baseline coordinate frame of epoch $t_1$ while strictly preserving pairwise internal distances ($Q^T Q = I$):
-
-$$Q = \arg\min_{\Omega^T \Omega = I} \Vert{} W^{(t_1)} - W^{(t_2)} \Omega \Vert{}_F$$
-
-Where $\Vert{}\cdot\Vert{}_F$ represents the Frobenius matrix norm. The optimal solution is derived via Singular Value Decomposition (SVD):
-1. Compute the cross-epoch correlation matrix:
-   $$M = (W^{(t_2)})^T W^{(t_1)}$$
-2. Factorize via Singular Value Decomposition:
-   $$M = U \Sigma V^T$$
-3. Derive the optimal orthogonal projection operator:
-   $$Q = U V^T$$
-
-### 2.2 Quantifying Semantic Displacement
-For any shared lexical token $w \in V$, its displacement across temporal boundaries is computed as the cosine distance in the aligned vector space:
-
-$$D(w) = 1 - \frac{\vec{v}_{t_1}(w) \cdot (Q^T \vec{v}_{t_2}(w))}{\Vert{}\vec{v}_{t_1}(w)\Vert{} \Vert{}Q^T \vec{v}_{t_2}(w)\Vert{}}$$
-
-* **Active Semantic Drift ($D(w) \gg 0.20$):** Tokens that shift contextual collocations or semantic fields over time (e.g., *nice* shifting from "precise/subtle" to "pleasant/agreeable"; *awful* shifting from "awe-inspiring" to "terrible").
-* **Lexical Fossilization ($D(w) \to 0$):** Archaic statutory, legal, or idiomatic formulas (e.g., *hereinabove*, *witnesseth*, *indenture*) that exhibit structural stagnation and invariant semantic neighborhoods across centuries.
+- **Smart Grid & Microgrid Resilience:** Discrete Extended Kalman Filtering (EKF), secondary $P\text{-}f$ and $Q\text{-}V$ droop dynamics, multi-agent consensus algorithms, and False Data Injection (FDI) mitigation in distributed energy resources.
+- **Electromagnetics & Power Electronics Modeling:** Mathematical modeling of Series-Series (SS) resonant inductive links, mutual inductance parameter extraction ($k, M$), Zero-Voltage Switching (ZVS) topologies, and Li-ion Thevenin equivalent circuits.
+- **OT/SCADA & Network Security:** Deep-packet APDU dissection for Modbus-TCP, zero-trust command whitelisting, application-layer telemetry anomaly detection, and edge Mutual TLS (mTLS) architectures.
+- **Computational Poetics & Stochastic Text Analysis:** Discrete sequence modeling, multi-scale Shannon information entropy, and quantitative pacing dynamics in historical serialized narrative corpora.
+- **Production Systems & DevSecOps:** Automated Bandit SAST security sweeps, flake8/PEP8 compliance gates, rootless Docker packaging, and automated continuous integration pipelines.
 
 ---
 
-## 3. Empirical Results
+### Featured Research Repositories & Software Testbeds
 
-When evaluated across historical corpora testing shift versus statutory fossilization, the pipeline produces the following displacement metrics:
+#### 1. Cyber-Physical Systems & Electrical Infrastructure
 
-| Lexical Token | Cosine Displacement ($D$) | Classification | Historical / Linguistic Trajectory |
+| Repository | Focus & Architecture | Security & CI/CD Pipeline | Status |
 | :--- | :--- | :--- | :--- |
-| **nice** | **0.4124** | Active Drift | Shift from epistemic precision to colloquial pleasantness |
-| **awful** | **0.3891** | Active Drift | Shift from religious solemnity/awe to severe misfortune |
-| **calculation** | 0.1842 | Moderate Drift | Transition from manual formal arithmetic to mechanization |
-| **hereinabove** | **0.0210** | **Fossilized** | Statutory legal formula; absolute syntactic inertia |
-| **indenture** | **0.0185** | **Fossilized** | Contractual legal archaic token |
-| **witnesseth** | **0.0121** | **Fossilized** | Early modern legal performative verb preserved in precedent |
+| **[microgrid-resilient-control](https://github.com/Haidriyam/microgrid-resilient-control)** | Secondary frequency consensus restoration on islanded AC microgrids. Implements inverter $P\text{-}f$ droop dynamics and outlier-rejection consensus to isolate False Data Injection (FDI) attacks. | Dynamic CPS test suite, flake8 style checks, rootless Docker container | ![CI](https://github.com/Haidriyam/microgrid-resilient-control/actions/workflows/devsecops-ci.yml/badge.svg) |
+| **[battery-ekf-state-estimator](https://github.com/Haidriyam/battery-ekf-state-estimator)** | Discrete Extended Kalman Filter (EKF) for Li-ion SoC tracking using a 1-RC Thevenin equivalent circuit, paired with boundary-checked CAN-bus telemetry frame parsing. | Stochastic noise convergence tests, CAN frame validation suite, Bandit SAST | ![CI](https://github.com/Haidriyam/battery-ekf-state-estimator/actions/workflows/devsecops-ci.yml/badge.svg) |
+| **[scada-ids-telemetry-engine](https://github.com/Haidriyam/scada-ids-telemetry-engine)** | Software-defined deep-packet APDU dissector for Modbus-TCP. Enforces zero-trust command whitelisting (blocking unauthorized coil writes) and checks telemetry against physical domain limits. | MBAP header boundary tests, malformed payload fuzzing, Bandit security sweeps | ![CI](https://github.com/Haidriyam/scada-ids-telemetry-engine/actions/workflows/devsecops-ci.yml/badge.svg) |
+| **[wireless-power-transmission-sim](https://github.com/Haidriyam/wireless-power-transmission-sim)** | Coupled-mode magnetic resonance simulator modeling mutual inductance decay ($M$), unloaded quality factors ($Q$), and frequency bifurcation over variable air gaps (0–150 mm). | Deterministic numerical solvers, PEP8 compliance tests, automated GitHub CI | ![CI](https://github.com/Haidriyam/wireless-power-transmission-sim/actions/workflows/devsecops-ci.yml/badge.svg) |
+
+#### 2. Enterprise Infrastructure, Zero-Trust & Network Defense
+
+| Repository | Focus & Architecture | Security & CI/CD Pipeline | Status |
+| :--- | :--- | :--- | :--- |
+| **[zero-trust-pki-mesh](https://github.com/Haidriyam/zero-trust-pki-mesh)** | Multi-tier X.509 Certificate Authority provisioning root, intermediate, and leaf certificates for edge Mutual TLS (mTLS) reverse proxy enforcement and CIDR access control. | Cryptographic chain validation, Nginx mTLS handshake tests, SAST auditing | ![CI](https://github.com/Haidriyam/zero-trust-pki-mesh/actions/workflows/devsecops-ci.yml/badge.svg) |
+| **[quantum-pqc-tls-canary](https://github.com/Haidriyam/quantum-pqc-tls-canary)** | NIST FIPS 203 ML-KEM-768 + X25519 hybrid key encapsulation canary evaluating handshake latency and MTU wire overhead for edge CPS telemetry links. | Downgrade attack detection test harness, wire overhead profiler, automated CI | ![CI](https://github.com/Haidriyam/quantum-pqc-tls-canary/actions/workflows/devsecops-ci.yml/badge.svg) |
+| **[gitops-mesh-orchestrator](https://github.com/Haidriyam/gitops-mesh-orchestrator)** | Service mesh platform featuring dynamic TTL leases, round-robin load distribution, token-bucket burst rate-limiting, and ingress packet inspection. | Multi-node distributed test harness, injection payload defense, rootless container | ![CI](https://github.com/Haidriyam/gitops-mesh-orchestrator/actions/workflows/devsecops-ci.yml/badge.svg) |
+| **[attack-surface-intel-pipeline](https://github.com/Haidriyam/attack-surface-intel-pipeline)** | External Attack Surface Management (EASM) engine aggregating reconnaissance data, scoring exposure vectors, and emitting SIEM-ready JSON telemetry. | Exposure heuristic unit tests, Bandit SAST security gate, automated Docker build | ![CI](https://github.com/Haidriyam/attack-surface-intel-pipeline/actions/workflows/devsecops-ci.yml/badge.svg) |
+
+#### 3. Computational Humanities & Quantitative Language Systems
+
+| Repository | Focus & Architecture | Security & CI/CD Pipeline | Status |
+| :--- | :--- | :--- | :--- |
+| **[victorian-serial-entropy](https://github.com/Haidriyam/victorian-serial-entropy)** | Information-theoretic analysis of serialized literary corpora. Validates the *Informational Bottleneck Hypothesis* across multi-scale sliding windows ($W=600, S=150$) and structural cliffhanger boundaries ($\Delta H < -0.45\text{ bits}$). | Tokenization via spaCy, discrete stochastic modeling, Matplotlib vectorization | Active Research |
+
+---
+
+### Engineering & Verification Standards
+
+Every repository implements automated verification workflows to ensure reproducible execution and security isolation:
+- **Continuous Integration (CI):** Automated GitHub Actions workflows trigger on every commit and pull request.
+- **Static Application Security Testing (SAST):** Scanned via `bandit` to identify and block security vulnerabilities.
+- **Code Style & Quality:** Strict PEP8 compliance enforced via `flake8` (`--max-line-length=120`).
+- **Mathematical & Protocol Verification:** Automated `pytest` suites asserting convergence tolerances, protocol boundary constraints, and numerical stability.
+- **Container Hardening:** Minimalist, rootless Docker images executing as unprivileged users (`UID 10001`).
