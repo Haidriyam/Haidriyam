@@ -3,6 +3,15 @@
 Systems & Cyber-Physical Security Engineer bridging classical Electrical Power foundations with production-grade Linux systems, protocol telemetry parsers, and reproducible software-defined CPS testbeds.
 
 ---
+# Multi-Scale Narrative Entropy Engine: Quantifying the Informational Bottleneck in Serialized Fiction
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Haidriyam/victorian-serial-entropy/blob/main/notebooks/demo.ipynb)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.pre--print-blue)](https://zenodo.org/)
+[![Code Style: PEP8](https://img.shields.io/badge/code%20style-pep8-green.svg)](https://www.python.org/dev/peps/pep-0008/)
+[![Field: Digital Humanities](https://img.shields.io/badge/Field-Digital%20Humanities%20%7C%20NLP-purple.svg)]()
+
 
 ### Research & Technical Focus Areas
 
